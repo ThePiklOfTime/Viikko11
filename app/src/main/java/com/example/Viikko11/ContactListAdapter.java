@@ -88,7 +88,7 @@ public class ContactListAdapter extends RecyclerView.Adapter<ContactViewHolder> 
             while (listIterator.hasNext()) {
                 Contact existing = listIterator.next();
 
-                if (current.getFullName().compareTo(existing.getFullName()) < 0) {
+                if (current.getFirstName().compareTo(existing.getFirstName()) < 0) {
                     listIterator.previous();
                     listIterator.add(current);
                     inserted = true;
