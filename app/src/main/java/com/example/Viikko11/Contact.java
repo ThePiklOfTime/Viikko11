@@ -26,6 +26,11 @@ public class Contact {
         return number;
     }
 
+    public String getFullName() {
+        String fll = this.firstName + " "  + this.lastName;
+        return fll;
+    }
+
     public String getContactGroup() {
         return contactGroup;
     }
