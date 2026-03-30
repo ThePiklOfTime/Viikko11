@@ -19,7 +19,8 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView rcv;
     private ContactStorage contactStorage;
     private ContactListAdapter contactListAdapter;
-
+    //Had to ask chatgpt how to show images, becouse they didn't show up.
+    // Also it fixed an error for me, when I was inflating the wrong view. It made only a simple line change.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

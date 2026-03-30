@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="100dp"
-    android:gravity="left"
+    android:gravity="start"
     android:orientation="horizontal">
 
-    <ImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/imageView"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_weight="1"
         android:background="#906C6C"
-        tools:srcCompat="@drawable/ic_launcher_foreground" />
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
 
     <LinearLayout
         android:layout_width="200dp"
@@ -46,20 +46,26 @@
             android:textSize="10sp" />
     </LinearLayout>
 
-    <ImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/ContactDetailsButton"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:background="#354A8E"
-        app:srcCompat="@drawable/outline_chat_info_24" />
+        android:padding="16dp"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/outline_chat_info_24"
+        app:tint="@android:color/white" />
 
-    <ImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/ContactDeleteButton"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:background="#E91E43"
-        app:srcCompat="@drawable/outline_delete_24" />
+        android:padding="16dp"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/outline_delete_24"
+        app:tint="@android:color/white" />
 
 </LinearLayout>
