@@ -63,7 +63,7 @@ public class ContactListAdapter extends RecyclerView.Adapter<ContactViewHolder> 
         while (iterator.hasNext()) {
             Contact current = iterator.next();
 
-            if (current.getContactGroup().equals("Työt")) {
+            if (current.getContactGroup().equals("Henkilökohtainen")) {
                 firstGroup.add(current);
             } else {
                 secondGroup.add(current);
