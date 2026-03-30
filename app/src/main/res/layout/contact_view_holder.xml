@@ -35,6 +35,7 @@
             android:layout_height="wrap_content"
             android:text="PuhelinNro"
             android:textAlignment="center"
+            android:visibility="gone"
             android:textSize="10sp" />
 
         <TextView
@@ -43,6 +44,7 @@
             android:layout_height="wrap_content"
             android:text="Ryhmä"
             android:textAlignment="center"
+            android:visibility="gone"
             android:textSize="10sp" />
     </LinearLayout>
 
