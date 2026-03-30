@@ -54,6 +54,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
     public void orderByGroup(View view){
-
+        contactListAdapter.sortByGroup();
     }
+    public void orderByAlphapet(View view){
+        contactListAdapter.sortByAlphabet();
+    }
+
+
 }
