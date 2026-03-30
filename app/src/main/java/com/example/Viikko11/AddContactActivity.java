@@ -26,7 +26,7 @@ public class AddContactActivity extends AppCompatActivity {
         lastName = findViewById(R.id.LastNameEdit);
         number = findViewById(R.id.PhoneNumberEdit);
         group = findViewById(R.id.ContactTypeRadioGroup);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.AddContactActivity), (v, insets) -> {
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.SortAlphabeticallyButton), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
