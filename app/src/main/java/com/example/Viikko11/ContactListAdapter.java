@@ -10,6 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.ListIterator;
 
 public class ContactListAdapter extends RecyclerView.Adapter<ContactViewHolder> {
 
@@ -50,6 +52,58 @@ public class ContactListAdapter extends RecyclerView.Adapter<ContactViewHolder> 
             }
         });
 
+
+    }
+    public void sortByGroup() {
+        ArrayList<Contact> firstGroup = new ArrayList<>();
+        ArrayList<Contact> secondGroup = new ArrayList<>();
+
+        Iterator<Contact> iterator = contacts.iterator();
+
+        while (iterator.hasNext()) {
+            Contact current = iterator.next();
+
+            if (current.getContactGroup().equals("Työt")) {
+                firstGroup.add(current);
+            } else {
+                secondGroup.add(current);
+            }
+        }
+
+
+        contacts.clear();
+        contacts.addAll(firstGroup);
+        contacts.addAll(secondGroup);
+        notifyDataSetChanged();
+    }
+    public void sortByAlphabet() {
+        ArrayList<Contact> sorted = new ArrayList<>();
+        Iterator<Contact> iterator = contacts.iterator();
+
+        while (iterator.hasNext()) {
+            Contact current = iterator.next();
+            ListIterator<Contact> listIterator = sorted.listIterator();
+            boolean inserted = false;
+
+            while (listIterator.hasNext()) {
+                Contact existing = listIterator.next();
+
+                if (current.getFirstName().compareTo(existing.getFirstName()) < 0) {
+                    listIterator.previous();
+                    listIterator.add(current);
+                    inserted = true;
+                    break;
+                }
+            }
+
+            if (!inserted) {
+                sorted.add(current);
+            }
+        }
+
+        contacts.clear();
+        contacts.addAll(sorted);
+        notifyDataSetChanged();
 
     }
 
